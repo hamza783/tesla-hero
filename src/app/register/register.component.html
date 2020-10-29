@@ -1,0 +1,65 @@
+<form  *ngIf="registerPage" [formGroup]="form"  (ngSubmit)="onRegister()">
+    <h2>Register</h2>
+    <p>
+        <label for="firstName" required="true" class="floatLabel">First Name</label>
+        <input formControlName="firstName" name="firstName" (keyup)="restError()" placeholder="James" type="text">
+    </p>
+    <p>
+        <label for="lastName" class="floatLabel">Last Name</label>
+        <input formControlName="lastName" name="lastName" (keyup)="restError()" placeholder="Bond" type="text">
+    </p>
+    <p>
+        <label for="email" class="floatLabel">Email</label>
+        <input formControlName="email" name="email" (keyup)="restError()" ngModel email
+            type="email" placeholder="bond_007@example.com">
+            <label *ngIf="email.errors?.email" style="color:red">
+                Email not valid.
+            </label> 
+    </p>
+    <p>
+        <label for="password" class="floatLabel">Password</label>
+        <input formControlName="password" (keyup)="restError()" name="password" type="password">
+    </p>
+    <p>
+        <label for="confirmPassword" class="floatLabel">Confirm Password</label>
+        <input formControlName="confirmPassword" (keydown)="restError()" type="password" (focusout)="validatePasswordMatch()">
+        <span *ngIf="!passMatch">Your passwords do not match</span>
+    </p>
+    <p>
+        <input type="submit" value="Create My Account" id="submit">
+        <span *ngIf="errorMessage">Please fill all fields</span>
+    </p>
+    <br>
+    <p>
+        <label class="floatLabel">Already have an acount? Sign in below</label>
+        <input type="button" value="Sign In" id="signIn" (click)="navigateTo('signInPage')">
+    </p>
+</form>
+<form *ngIf="confirmationPage">
+    <label>Congratulations {{signedInAs}}! You are signed in</label>
+</form>
+<form  *ngIf="signInPage" [formGroup]="formSignIn" (ngSubmit)="onSignIn()">
+    <h2>Sign In</h2>
+    <p>
+        <label for="email" class="floatLabel">Email</label>
+        <input formControlName="userName" name="userName" (keyup)="restError()" ngModel email
+            type="email" placeholder="bond_007@example.com">
+    </p>
+    <p>
+        <label for="logInPass" class="floatLabel">Password</label>
+        <input formControlName="logInPass" (keyup)="restError()" name="logInPass" type="password">
+    </p>
+    <p>
+        <input type="submit" value="Sign In" id="submit">
+        <span *ngIf="errorMessage">Invalid email or password. Please make sure email address is valid</span>
+    </p>
+    <br>
+    <p>
+        <label class="floatLabel">Don't have an account? Sign up below</label>
+        <input type="button" value="Sign Up" (click)="navigateTo('registerPage')">
+    </p>
+</form>
+<!-- should never get to this page -->
+<form *ngIf="errorPage">
+    <label>Oppps!!! This is not good..... Something broke.</label>
+</form>

@@ -1,0 +1,36 @@
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0 0 25px 0 black;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.title {
+    font-size: 25px;
+}
+
+.nav-button {
+    width: 100px;
+    color: white;
+    text-align: center;
+    font-size: medium;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.nav-button:hover {
+    background-color: #074b8f;
+}

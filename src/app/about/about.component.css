@@ -1,0 +1,38 @@
+.center {
+    margin: auto;
+    width: 95%;
+}
+
+.header {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: #0e96b8;
+}
+
+.panelHeader {
+    background:none #125ca7;
+    border: 1px solid #aaaaaa;
+    color: #ffffff;
+    font-size: 1em;
+}
+
+.summary, .projects {
+    background-color: white;
+    padding: 5px;
+    color:black;
+}
+.content {
+    padding: 5px;
+    border-style: outset;
+}
+
+.projectSection {
+    box-sizing: border-box;
+    border-style: outset;
+    padding: 10px;
+    margin-bottom: 5px; 
+}
+
+input[type="button"] {
+    margin: 2px;
+}

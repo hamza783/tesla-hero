@@ -1,0 +1,56 @@
+<div class="header center">
+    <h2>About Me</h2>
+</div>
+<div class="content center">
+    <p-panel header="Summary" [toggleable]="true" [collapsed] = "false" styleClass="panelHeader" [transitionOptions]="'300ms'">
+        <div class="summary">
+            <p>Hi, my name is Hamza and I am an awesome software developer. This is my simple portfolio website.</p>
+            <p>
+                I chose to make a website about Tesla because I like their cars and am planning on buying it in near future. 
+                This website is made completely by me using Angular CLI, without the use of any templates.  
+            </p>
+            <p>I have two years of experience in web development, mostly working with backend development
+                using Java and some SQL. I am also familiar with angular as well, and am always trying to learn new technologies.
+                
+                As you can probably tell by looking at this website, CSS is not one of my strengths and I mostly prefer working on backend.
+
+                You can see some of the projects I worked on below.</p>
+        </div>
+    </p-panel>
+    <br>
+    <p-panel header="Projects" [toggleable]="true" [collapsed] = "false" styleClass="panelHeader" [transitionOptions]="'300ms'">
+        <div class="projects">
+            <div class="projectSection">
+                <label><strong>Face Recognition</strong></label>
+                <p>Web site developed using React that takes advantage of Clarafai’s face detection API to detect faces in pictures.
+                    You can log in using any string, there is no authentication at this time. Afrer logging in you can paste a url of any picture
+                    and the application will use Clarafai’s API to get the coordinates of where a face is detected in the picture. 
+                    Then the application will draw a blue box around the face. This is very simple website that was built in an effort to
+                    learn react.
+                </p>
+                <input type="button" class="btn btn-success"
+                    onclick="window.open('https://hamza783.github.io/faceRecognition/','_blank')" value="Demo"/>
+                <input type="button" class="btn btn-primary"
+                    onclick="window.open('https://github.com/hamza783/faceRecognition','_blank')" value="Source Code"/>
+            </div>
+            <div class="projectSection">
+                <label><strong>Unique Email</strong></label>
+                <p>An API build using spring boot and REST web service. The API takes a list of email addresses and returns a list of unique
+                    email addresses based on gmail rules for unique email. More details on how to run the web service can be found on the 
+                    github page.
+                </p>
+                <input type="button" action="#" class="btn btn-success" disabled value="Demo"/>
+                <input type="button" class="btn btn-primary"
+                    onclick="window.open('https://github.com/hamza783/uniqueEmailAddresses','_blank')" value="Source Code"/>
+            </div>
+            <div class="projectSection">
+                <label><strong>RoboFriends</strong></label>
+                <p>Simple web app build using react that shows a list of robots on the screen and gives user the ability to search robots by name</p>
+                <input type="button" class="btn btn-success"
+                    onclick="window.open('https://hamza783.github.io/robofriends/','_blank')" value="Demo"/>
+                <input type="button" class="btn btn-primary"
+                    onclick="window.open('https://github.com/hamza783/robofriends','_blank')" value="Source Code"/>
+            </div>
+        </div>
+    </p-panel>
+</div>

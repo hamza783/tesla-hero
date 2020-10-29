@@ -1,16 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PanelModule } from 'primeng/panel';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
+import {AboutComponent} from './about/about.component';
+import { RegisterComponent } from './register/register.component';
+import { CarsComponent } from './cars/cars.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutComponent,
+    RegisterComponent,
+    NavigationMenuComponent,
+    CarsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule,
+    PanelModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
