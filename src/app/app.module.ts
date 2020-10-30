@@ -11,6 +11,7 @@ import {AboutComponent} from './about/about.component';
 import { RegisterComponent } from './register/register.component';
 import { CarsComponent } from './cars/cars.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AboutComponent,
     RegisterComponent,
     NavigationMenuComponent,
-    CarsComponent
+    CarsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

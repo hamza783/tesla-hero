@@ -2,4 +2,6 @@
     /* same as navigation menu height */
     margin-top: 60px; 
     border-style: none;
+    overflow-y:scroll;
+    height:90vh;
 }

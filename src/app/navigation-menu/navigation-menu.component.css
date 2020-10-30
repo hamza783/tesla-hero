@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 60px;
+    height: 8vh;
     display: flex;
     align-items: center;
     background-color: #1976d2;
@@ -19,7 +19,7 @@
 }
 
 .title {
-    font-size: 25px;
+    font-size: xx-large;
 }
 
 .nav-button {

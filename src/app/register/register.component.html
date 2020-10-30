@@ -1,4 +1,5 @@
-<form  *ngIf="registerPage" [formGroup]="form"  (ngSubmit)="onRegister()">
+<div class="parent">
+<form  *ngIf="registerPage" [formGroup]="form" (ngSubmit)="onRegister()">
     <h2>Register</h2>
     <p>
         <label for="firstName" required="true" class="floatLabel">First Name</label>
@@ -63,3 +64,4 @@
 <form *ngIf="errorPage">
     <label>Oppps!!! This is not good..... Something broke.</label>
 </form>
+</div>
