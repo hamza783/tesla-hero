@@ -12,7 +12,17 @@
                 
                 As you can probably tell by looking at this website, CSS is not one of my strengths and I mostly prefer working on backend.
 
-                You can see some of the projects I worked on below.</p>
+                You can see my resume and some of the projects I worked on below.</p>
+        </div>
+    </p-panel>
+    <br>
+    <p-panel header="Resume and LinkedIn" [toggleable]="true" [collapsed] = "false" styleClass="panelHeader" [transitionOptions]="'300ms'">
+        <div class="summary">
+            <p>Use below links to view my resume or to download it as a pdf.</p>
+            <input type="button" value="View Resume" class="btn btn-info btn-sm" (click)="viewResume()">
+            <input type="button" value="Downlaod Resume" class="btn btn-danger btn-sm" (click)="downloadResume()">
+            <input type="button" value="LinkedIn" class="btn btn-primary btn-sm"
+                onclick="window.open('https://www.linkedin.com/in/hamza-shakeel/','_blank')">
         </div>
     </p-panel>
     <br>
