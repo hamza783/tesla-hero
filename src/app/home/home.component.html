@@ -1,1 +1,31 @@
-<p>home works!</p>
+<div class="main-content">
+    <ngb-carousel *ngIf="images">
+        <ng-template ngbSlide>
+          <img src="assets/images/cybertruck-b1.jpg" alt="Random first slide" style="width: 100%; height: 50vh">
+          <div class="carousel-caption">
+            <h3>Cybertruck</h3>
+            <p>Truck stolen straight from Area-51. To be used on Mars in future</p>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <img src="assets/images/roadster-b2.jpg" alt="Random second slide" style="width: 100%; height: 50vh">
+          <div class="carousel-caption">
+            <h3>Roadster</h3>
+            <p>It will basically be a rocket</p>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <img src="assets/images/model3-b3.jpg" alt="Random third slide" style="width: 100%; height: 50vh">
+          <div class="carousel-caption">
+            <h3>Model 3</h3>
+            <p>The car we can actually afford</p>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+</div>
+<div class="left-content">
+    <p>this is the side contents</p>
+</div>
+<div class="right-content">
+    <p>this is the side contents</p>
+</div>

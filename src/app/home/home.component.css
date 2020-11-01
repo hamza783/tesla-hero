@@ -1,0 +1,21 @@
+.main-content {
+    height: 50vh;
+}
+
+.left-content {
+    border-style: outset;
+    width: 20vw;
+    margin-top: 1vw;
+    float: left;
+}
+
+.right-content {
+    border-style: outset;
+    width: 69vw;
+    float: right;
+    margin-top: 1vw;
+}
+
+.right.carousel-control, .left.carousel-control {
+    visibility: hidden;
+}

@@ -1,7 +1,9 @@
 .content {
-    /* same as navigation menu height */
-    margin-top: 60px; 
+    /* margin is a little more than navigation menu height */
+    margin-top: 10vh; 
     border-style: none;
-    overflow-y:scroll;
+    overflow-y:auto;
     height:90vh;
+    padding-left: 5%;
+    padding-right: 5%;
 }
