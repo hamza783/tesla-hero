@@ -1,6 +1,5 @@
-.header {
-    margin-bottom: 1em;
-    color: #0e96b8;
+h2 {
+    color: #026681;
 }
 
 .panelHeader {
@@ -18,6 +17,7 @@
 .content {
     padding: 5px;
     border-style: outset;
+    background-color: white;
 }
 
 .projectSection {

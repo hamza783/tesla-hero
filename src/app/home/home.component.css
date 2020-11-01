@@ -1,4 +1,8 @@
-.main-content {
+.main-content-home {
+    overflow:auto;
+    
+}
+.banner {
     height: 50vh;
 }
 
@@ -6,14 +10,23 @@
     border-style: outset;
     width: 20vw;
     margin-top: 1vw;
+    padding: 1em;
     float: left;
+    background-color:white;
+}
+
+.news-panel {
+    border-top-style: inset;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
 }
 
 .right-content {
     border-style: outset;
-    width: 69vw;
+    width: 68vw;
     float: right;
     margin-top: 1vw;
+    background-color:white;
 }
 
 .right.carousel-control, .left.carousel-control {

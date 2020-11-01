@@ -1,9 +1,14 @@
+.nav-bar {
+    height: 8vh; /*same as navigation-menu height */
+}
 .content {
     /* margin is a little more than navigation menu height */
-    margin-top: 10vh; 
+    /* margin-top: 10vh;  */
+    padding-top: 0.5em;
     border-style: none;
     overflow-y:auto;
-    height:90vh;
+    height:92vh;
     padding-left: 5%;
     padding-right: 5%;
+    background-color: rgb(238, 238, 238);
 }
