@@ -1,6 +1,6 @@
-<div class="main-content-home">
-  <div class="banner">
-    <ngb-carousel *ngIf="images">
+<div class="main-content-home container">
+  <div class="row banner">
+    <ngb-carousel>
         <ng-template ngbSlide>
           <img src="assets/images/cybertruck-b1.jpg" alt="Random first slide" style="width: 100%; height: 50vh">
           <div class="carousel-caption">
@@ -24,28 +24,71 @@
         </ng-template>
       </ngb-carousel>
   </div>
-  <div class="left-content">
-      <h3>Tesla News</h3>
-      <div class="news-panel">
-        <a href="#" style="color: black;">Important News #1
-          <p>Some very important tesla news</p>
-          <p class="hidden-text">Additional text related to this news that could be helpful for user</p>
-        </a>
+  <div class="row">
+    <div class="left-content col">
+        <h3>Tesla News</h3>
+        <div class="news-panel">
+          <a href="#" style="color: black;">Important News #1
+            <p>Some very important tesla news</p>
+            <p class="hidden-text">Additional text related to this news that could be helpful for user</p>
+          </a>
+        </div>
+        <div class="news-panel">
+          <a href="#" style="color: black;">Important News #2
+            <p>Another very important tesla news</p>
+            <p class="hidden-text">Additional text related to this news that could be helpful for user</p>
+          </a>
+        </div>
+        <div class="news-panel">
+          <a href="#" style="color: black;">Important News #3
+            <p>Not as important tesla news</p>
+            <p class="hidden-text">Additional text related to this news that could be helpful for user</p>
+          </a>
+        </div>
+    </div>
+    <div class="right-content col-9">
+      <div class="container">
+        <div class="row">
+          <div class="col"><h4>Tesla stock price</h4></div>
+          <div class="col text-right">
+            <div class="chart-buttons">
+              <button [ngClass]="{'chart-button-selected': chartStyle=='T', 'chart-button': chartStyle!='T'}"
+                (click)="setChartType('T')">10D</button>
+              <button [ngClass]="{'chart-button-selected': chartStyle=='M', 'chart-button': chartStyle!='M'}" 
+                (click)="setChartType('M')">1M</button>
+              <button [ngClass]="{'chart-button-selected': chartStyle=='Y', 'chart-button': chartStyle!='Y'}"
+                (click)="setChartType('Y')">1Y</button>
+              <button [ngClass]="{'chart-button-selected': chartStyle=='F', 'chart-button': chartStyle!='F'}"
+                (click)="setChartType('F')">5Y</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="news-panel">
-        <a href="#" style="color: black;">Important News #2
-          <p>Another very important tesla news</p>
-          <p class="hidden-text">Additional text related to this news that could be helpful for user</p>
-        </a>
+      <div *ngIf="!loadingGraph" style="width: 100%; height: 80%;">
+        <ngx-charts-line-chart
+            [results]="chartData"
+            [xAxisLabel]="'Date'"
+            [legendTitle]="'Stock price of Tesla'"
+            [yAxisLabel]="'Price'"
+            [legend]="false"
+            [showXAxisLabel]="true"
+            [showYAxisLabel]="true"
+            [xAxis]="true"
+            [yAxis]="true"
+            [gradient]="true"
+            [yScaleMin]="yMin"
+            [yScaleMax]="yMax">
+        </ngx-charts-line-chart>
       </div>
-      <div class="news-panel">
-        <a href="#" style="color: black;">Important News #3
-          <p>Not as important tesla news</p>
-          <p class="hidden-text">Additional text related to this news that could be helpful for user</p>
-        </a>
+      <div *ngIf="loadingGraph" style="color:red">
+        Loading graph.....
       </div>
-  </div>
-  <div class="right-content">
-      <p>this is the side contents</p>
+      <div>
+        <p>On first load, the above graph loads Tesla stock prices using an API. You will see "Loading Graph" text, while it is calling API.
+          Then, it caches the results so we don't keep calling the API every time. This is to improve the performance 
+          in case we keep toggling between different time durations.
+        </p>
+      </div>
+    </div>
   </div>
 </div>

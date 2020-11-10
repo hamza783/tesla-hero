@@ -30,6 +30,7 @@ export class AboutComponent implements OnInit {
     let link = document.createElement('a');
     link.setAttribute('type', 'hidden');
     link.href = 'assets/hamza_shakel_Resume.pdf';
+    link.target="_blank";
     // link.download = path;
     document.body.appendChild(link);
     link.click();

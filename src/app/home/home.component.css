@@ -1,17 +1,12 @@
-.main-content-home {
-    overflow:auto;
-    
-}
 .banner {
     height: 50vh;
 }
 
 .left-content {
     border-style: outset;
-    width: 20vw;
     margin-top: 1vw;
+    margin-right: 0.5em;
     padding: 1em;
-    float: left;
     background-color:white;
 }
 
@@ -23,12 +18,33 @@
 
 .right-content {
     border-style: outset;
-    width: 68vw;
-    float: right;
     margin-top: 1vw;
+    padding: 1em 0 0 1.5em;
     background-color:white;
 }
 
 .right.carousel-control, .left.carousel-control {
     visibility: hidden;
+}
+
+.chart-button {
+    padding: 0.4em;
+    background-color: white;
+    border-style: none;
+    width: 2.5em;
+}
+
+.chart-button:hover {
+    color: white;
+    background-color:rgb(141, 182, 170);
+}
+
+.chart-button-selected, .chart-button-selected:hover  {
+    width: 2.5em;
+    padding: 0.4em;
+    color: white;
+    border-style: none;
+    background-color:rgb(36, 100, 81);
+    border-style: none;
+    cursor: default;
 }
