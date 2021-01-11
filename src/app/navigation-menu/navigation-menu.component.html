@@ -2,8 +2,8 @@
 <div class="toolbar" role="banner">
     <span class="title">Tesla Hero</span>
     <div class="spacer"></div>
-    <a href="" routerLink="/" class="nav-button">Home</a>
-    <a href="" routerLink="/cars" class="nav-button">Tesla Cars</a>
-    <a href="" routerLink="/about" routerLinkActive="active" class="nav-button">About Me</a>
-    <a href="" routerLink="/register" class="nav-button">Sign In</a>
+    <a routerLink="/home" class="nav-button" routerLinkActive="active">Home</a>
+    <a routerLink="/cars" class="nav-button" routerLinkActive="active">Tesla Cars</a>
+    <a routerLink="/about" class="nav-button" routerLinkActive="active">About Me</a>
+    <a routerLink="/register" class="nav-button" [routerLinkActive]="['active']">{{username}}</a>
 </div>

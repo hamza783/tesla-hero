@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,Validators } from '@angular/forms';
+import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-register',
@@ -25,6 +26,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
+    private heroService: HeroService
   ) { 
   }
 
@@ -41,6 +43,7 @@ export class RegisterComponent implements OnInit {
       logInPass: ['', Validators.required],
     });
     this.navigateTo("signInPage");
+    this.heroService.updateMessage('Sign In');
   }
   get email() {
     return this.form.get('email');
@@ -69,6 +72,7 @@ export class RegisterComponent implements OnInit {
     } else if(this.validatePasswordMatch()) {
       this.signedInAs=this.form.value.firstName;
       this.navigateTo("confirmationPage")
+      this.heroService.updateMessage('Sign Out'); // to change the sign in text to sign out
     }
   }
 
@@ -79,6 +83,7 @@ export class RegisterComponent implements OnInit {
       let userName = this.formSignIn.value.userName;
       this.signedInAs=userName.substring(0, userName.indexOf("@"));
       this.navigateTo("confirmationPage");
+      this.heroService.updateMessage('Sign Out'); // to change the sign in text to sign out
     }
   }
 

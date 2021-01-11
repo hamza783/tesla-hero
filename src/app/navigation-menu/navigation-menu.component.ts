@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import { HeroService } from '../hero.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-navigation-menu',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationMenuComponent implements OnInit {
 
-  constructor() { }
+  username="";
+  public subscription: Subscription;
+  constructor(private router: Router, private heroService: HeroService) { }
 
   ngOnInit(): void {
+    // set subscribe to message service
+    this.subscription = this.heroService.getMessage().subscribe(msg => this.username = msg);
+    this.username='Sign In';
+  }
+
+  ngOnRender(): void {
+    this.username='Sign In';
+  }
+  public ngOnDestroy(): void {
+    this.subscription.unsubscribe(); // onDestroy cancels the subscribe request
   }
 
 }

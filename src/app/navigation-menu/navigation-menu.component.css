@@ -24,13 +24,19 @@
 
 .nav-button {
     width: 100px;
+    height: 100%;
     color: white;
-    text-align: center;
     font-size: medium;
     text-decoration: none;
-    padding: 5px;
+    display: flex;
+    align-items:center;    
+    justify-content:center;
 }
 
 .nav-button:hover {
     background-color: #074b8f;
+}
+
+.active {
+    background-color: #02305f;
 }
