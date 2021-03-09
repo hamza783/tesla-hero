@@ -15,7 +15,9 @@ h2 {
     color:black;
 }
 .content {
-    padding: 5px;
+    padding-top: 0.3em;
+    padding-left: 5%;
+    padding-right: 5%;
     border-style: outset;
     background-color: white;
 }

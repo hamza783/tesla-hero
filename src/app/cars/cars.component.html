@@ -1,3 +1,30 @@
-<div>
-    <h2>in progress</h2>
+<div [ngClass]="[backGroundClass]" style="height: 100%; width: 100%;">
+    <ul  class="nav justify-content-center">
+        <li class="nav-item">
+            <button class="nav-link transparent-bg" (click)="setCar('3')">Model 3</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link transparent-bg" (click)="setCar('Y')">Model Y</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link transparent-bg" (click)="setCar('S')">Model S</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link transparent-bg" (click)="setCar('X')">Model X</button>
+        </li>
+    </ul>
+    <div *ngIf="car=='model3'" class="transparent-bg">
+        <p-card header="Model 3">
+            <p>This is model 3 card</p>
+        </p-card>
+    </div>
+    <div *ngIf="car=='modelY'" class="transparent-bg">
+        <p>This is model Y</p>
+    </div>
+    <div *ngIf="car=='modelS'" class="transparent-bg">
+        <p>This is model S</p>
+    </div>
+    <div *ngIf="car=='modelX'" class="transparent-bg">
+        <p>This is model X</p>
+    </div>
 </div>

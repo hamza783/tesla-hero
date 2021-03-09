@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PanelModule } from 'primeng/panel';
+import {CardModule} from 'primeng/card';
+import {TabViewModule} from 'primeng/tabview'
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from "@angular/common/http";
 
@@ -31,6 +34,8 @@ import { NgxChartsModule }from '@swimlane/ngx-charts';
     ReactiveFormsModule,
     NgbModule,
     PanelModule,
+    CardModule,
+    TabViewModule,
     BrowserAnimationsModule,
     HttpClientModule,
     NgxChartsModule
