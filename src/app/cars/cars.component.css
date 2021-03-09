@@ -11,29 +11,29 @@ p {
 .transparent-bg{
 	background: rgba(255, 165, 0, 0);
     text-align: center;
-    
+
 }
 
 .background-model-3 {
-    background-image: url("/assets/images/model3-car.jpg");
+    background-image: url("../../assets/images/model3-car.jpg");
     background-size: cover;
     background-repeat:no-repeat;
 }
 
 .background-model-y {
-    background-image: url("/assets/images/model-y-car.jpg");
+    background-image: url("../../assets/images/model-y-car.jpg");
     background-size: cover;
     background-repeat:no-repeat;
 }
 
 .background-model-s {
-    background-image: url("/assets/images/model-s-car.jpg");
+    background-image: url("../../assets/images/model-s-car.jpg");
     background-size: cover;
     background-repeat:no-repeat;
 }
 
 .background-model-x {
-    background-image: url("/assets/images/model-x-car.jpg");
+    background-image: url("../../assets/images/model-x-car.jpg");
     background-size: cover;
     background-repeat:no-repeat;
 }
