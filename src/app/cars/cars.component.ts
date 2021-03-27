@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-cars',
@@ -7,11 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarsComponent implements OnInit {
 
-  car="model3";
+  car="";
+  features=[];
+  cars= new Map ([
+    ["model3",{"0-60":"3.1 s","Range":"355 mi", "Type":"AWD"}],
+    ["modelY",{"0-60":"3.5 s","Range":"326 mi", "Cargo":"68 cu ft"}],
+    ["modelS", {"0-60":"1.99 s","Range":"390", "Top Speed":"200"}],
+    ["modelX",{"0-60":"2.5 s","Range":"340", "Type":"AWD","Quater Mile":"9.9s"}]
+  ]);
+
   backGroundClass="background-model-3";
   constructor() { }
 
   ngOnInit(): void {
+    this.setCar('3');
+    console.log("init cars");
   }
 
   setCar(carName) {
@@ -33,5 +43,14 @@ export class CarsComponent implements OnInit {
         this.backGroundClass="background-model-x"
         break;
     }
+    this.features=[];
+    let feats = this.cars.get(this.car);
+    for (var key in feats){
+      var feature = {featureName:"",featureValue:""};
+      feature.featureName=key;
+      feature.featureValue=feats[key];
+      this.features.push(feature);
+    }
   }
+
 }

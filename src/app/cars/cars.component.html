@@ -13,18 +13,18 @@
             <button class="nav-link transparent-bg" (click)="setCar('X')">Model X</button>
         </li>
     </ul>
-    <div *ngIf="car=='model3'" class="transparent-bg">
-        <p-card header="Model 3">
-            <p>This is model 3 card.</p>
-        </p-card>
-    </div>
-    <div *ngIf="car=='modelY'" class="transparent-bg">
-        <p>This is model Y</p>
-    </div>
-    <div *ngIf="car=='modelS'" class="transparent-bg">
-        <p>This is model S</p>
-    </div>
-    <div *ngIf="car=='modelX'" class="transparent-bg">
-        <p>This is model X</p>
+    <div class="transparent-bg card" style="text-align: center;">
+        <table>
+            <tr>
+                <th *ngFor="let feature of features">
+                    {{feature.featureValue}}
+                </th>
+            <tr>
+            <tr class="desc">
+                <td *ngFor="let feature of features">
+                    {{feature.featureName}}
+                </td>
+            <tr>
+       </table>
     </div>
 </div>

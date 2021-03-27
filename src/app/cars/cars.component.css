@@ -10,8 +10,6 @@ p {
 
 .transparent-bg{
 	background: rgba(255, 165, 0, 0);
-    text-align: center;
-
 }
 
 .background-model-3 {
@@ -37,3 +35,15 @@ p {
     background-size: cover;
     background-repeat:no-repeat;
 }
+
+.card {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	color:white;
+	font-size: 2em;
+  }
+
+  .desc {
+	font-size: 0.5em;
+  }
