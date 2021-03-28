@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("Response");
-  //  this.mockDate()
+  // this.mockDate()
     this.getData(10);
   }
 
